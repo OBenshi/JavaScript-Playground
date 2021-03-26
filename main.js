@@ -82,59 +82,167 @@ for (i = 0; i < students.length; i++) {
     
 }
 
+            // Exercise 2
+                // Create an array with all the ages of the students in your class.
+                // Iterate the array using a while loop, and then print every age in the console.
+                // Add a conditional inside the while loop to only print even numbers.
+                // Write again a loop but use a "for" loop instead of a "while" loop.
+                // Save your changes to your JavaScript file.Reload the HTML page in your browser.
+                // You should see every age printed, then only the even numbers printed.
+
+let studentsAge = [30, 36, 28, 19, 69, 43];
+var i = 0;
+while (i < studentsAge.length) {
+    console.log(studentsAge[i]);
+    i++;
+}
+
+var i = 0;
+while (i < studentsAge.length) {
+    if (studentsAge[i] % 2 == 0 ) {  
+    console.log(studentsAge[i]);}
+    i++;
+}
 
 
 
+// For the following exercises, you cannot sort your array.
+// Be sure your solution works for any array that it is passed!
+
+            // Exercise 3
+                // Write a function that receives an array as a parameter and prints the lowest number in the array to the console.
+                // Save the changes to your JavaScript file.Reload the HTML page in your browser.
+                // You should see the lowest number in the array printed in the console.If not, investigate and fix it.
+
+function findMin(array) {
+    var i;
+    var min = Infinity;
+    for (i = 0; i < array.length; i++) {
+        if (array[i] < min) {
+            min = array[i];
+        }
+    }
+    return min;
+}
+
+console.log(findMin(studentsAge))
+
+            // Exercise 4
+                // Write a function that receives an array as a parameter and prints the biggest number in the array to the console.
+                // Save the changes to your JavaScript file.Reload the HTML page in your browser.
+                // You should see the biggest number in the array printed in the console.If not, investigate and fix it.
+
+function findMax(array) {
+    var i;
+    var max = -Infinity;
+    for (i = 0; i < array.length; i++) {
+        if (array[i] > max) {
+            max = array[i];
+        }
+    }
+    return max;
+}
+
+console.log(findMax(studentsAge))
 
 
-// Looping over an Array
-// Exercise 2
-// Create an array with all the ages of the students in your class. Iterate the array using a while loop, and then print every age in the console. Add a conditional inside the while loop to only print even numbers. Write again a loop but use a "for" loop instead of a "while" loop. Save your changes to your JavaScript file. Reload the HTML page in your browser. You should see every age printed, then only the even numbers printed. If not, investigate and fix it.
+            // Exercise 5
+                // Write a function that receives two parameters, an array, and an index. 
+                // The function will print the value of the element at the given position(one - based) to the console.
+                // For example, given the following array and index, the function will print '6'.
+                // var array = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100]; var index = 1; 
+                // Save the changes to your JavaScript file and check your browser console.
+                // You should see the number at the correct index printed in the console.If not, investigate and fix it.
 
-// Functions that use Arrays
-// For the following exercises, you cannot sort your array. Be sure your solution works for any array that it is passed!
+function printVal(array, i) {
+    console.log(array[i]);
+}
 
-// Exercise 3
-// Write a function that receives an array as a parameter and prints the lowest number in the array to the console. Save the changes to your JavaScript file. Reload the HTML page in your browser. You should see the lowest number in the array printed in the console. If not, investigate and fix it.
+let example = [3, 6, 67, 6, 23, 11, 100, 8, 93, 0, 17, 24, 7, 1, 33, 45, 28, 33, 23, 12, 99, 100];
+printVal(example, 1);
 
-// Exercise 4
-// Write a function that receives an array as a parameter and prints the biggest number in the array to the console. Save the changes to your JavaScript file. Reload the HTML page in your browser. You should see the biggest number in the array printed in the console. If not, investigate and fix it.
 
-// Exercise 5
-// Write a function that receives two parameters, an array, and an index. The function will print the value of the element at the given position (one-based) to the console. For example, given the following array and index, the function will print '6'.
-// var array = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100]; var index = 1; Save the changes to your JavaScript file and check your browser console. You should see the number at the correct index printed in the console. If not, investigate and fix it.
+            // Exercise 6
+                // Write a function that receives an array and only prints the values that repeat.
+                // For example, given the following array and index, the function will print '6,23,33,100'.
+                // var array = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100];
+                // Save the changes to your JavaScript file. Reload the HTML page in your browser.
+                // You should see an array of the repeated numbers printed in the console.If not, investigate and fix it.
+function dabel(array) {
+    let seen = [];
+    let twice = [];
+    for (let i = 0; i < array.length; i++) {
+        if (seen.includes(array[i])) {
+            twice.push(array[i])
+        } else {
+            seen.push(array[i])
+        }
+        
+    }
+    for (let i = 0; i < twice.length; i++) {
+        console.log(twice[i])
+        
+    }
+}
 
-// Exercise 6
-// Write a function that receives an array and only prints the values that repeat.
+dabel(example);
 
-// For example, given the following array and index, the function will print '6,23,33,100'.
+             // Exercise 7
+                // Write a simple JavaScript function to join all elements of the following array into a string.
+                // myColor = ["Red", "Green", "White", "Black"];
+                // Save the changes to your JavaScript file. Reload the HTML page in your browser. You should see the following in your console:
+                // "Red", "Green", "White", "Black". 
+                // If not, investigate and fix it.
 
-// var array = [3,6,67,6,23,11,100,8,93,0,17,24,7,1,33,45,28,33,23,12,99,100];
+function stringTogether(array) {
+    let together = "";
+    for (let i = 0; i < array.length; i++) {
+        together = together.concat(" "+array[i]);
+    }
+    console.log(together.trim());
+}
 
-// Save the changes to your JavaScript file. Reload the HTML page in your browser. You should see an array of the repeated numbers printed in the console. If not, investigate and fix it.
+myColor = ["Red", "Green", "White", "Black"];
 
-// Tip: this is considered by many students the most difficult exercise, therefore dedicate max. an hour to find a solution and if you can't leave it for tomorrow. Most of the time we need to take breaks and we will be able to see problems from different angles with a fresh mind.
+stringTogether(myColor);
+    
+        // JavaScript String
+            // Exercise 1
+                // Write a JavaScript function that reverses a number.
+                // For example, if x = 32443 then the output should be 34423.
+                // Save your JavaScript file and reload the page.
+                // Make sure you see the correct output.If not, investigate and fix it.
 
-// Exercise 7
-// Write a simple JavaScript function to join all elements of the following array into a string.
+function backwards(num) {
+    let numString = num.toString();
+    let back = "";
+    for (let i = numString.length+1; i> 0; i--) {
+        back = back.concat(numString.charAt(i));
+    }
 
-// myColor = ["Red", "Green", "White", "Black"];
+    console.log(back);
+}
 
-// Save the changes to your JavaScript file. Reload the HTML page in your browser. You should see the following in your console:
+let x = 32443
+backwards(x)
 
-// "Red", "Green", "White", "Black"
+            // Exercise 2
+                // Write a JavaScript function that returns a string in alphabetical order. 
+                // For example, if x = 'webmaster' then the output should be 'abeemrstw'.
+                // Punctuation and numbers aren't passed in the string.
+                // Save your JavaScript file and reload the page.Make sure you see the correct output.If not, investigate and fix it.
 
-// If not, investigate and fix it.
+function makeAlphabet(str) {
+  var arr = str.split('');
+  arr.sort();
+  return arr.join('').trim();
+}
 
-// JavaScript String
-// Exercise 1
-// Write a JavaScript function that reverses a number. For example, if x = 32443 then the output should be 34423. Save your JavaScript file and reload the page. Make sure you see the correct output. If not, investigate and fix it.
-
-// Exercise 2
-// Write a JavaScript function that returns a string in alphabetical order. For example, if x = 'webmaster' then the output should be 'abeemrstw'. Punctuation and numbers aren't passed in the string. Save your JavaScript file and reload the page. Make sure you see the correct output. If not, investigate and fix it.
+let mmm = "webmaster"
+console.log(makeAlphabet(mmm));
 
 // Exercise 3
 // Write a JavaScript function that converts the first letter of every word to uppercase. For example, if x = "prince of persia" then the output should be "Prince Of Persia". Save your JavaScript file and reload the page. Make sure you see the correct output. If not, investigate and fix it.
 
 // Exercise 4
-// Write a JavaScript function that finds the longest word in a phrase. For example, if x = "Web Development Tutorial", then the output should be "Development". Save your JavaScript file and reload the page. Make sure you see the correct output. If not, investigate and fix it.
+// Write a JavaScript function that finds the longest word in a phrase. For example, if x = "Web Development Tutorial", then the output should be "Development". Save your JavaScript file and reload the page. Make sure you see the correct output. If not, investigate and fix it
