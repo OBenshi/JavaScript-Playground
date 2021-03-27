@@ -241,8 +241,68 @@ function makeAlphabet(str) {
 let mmm = "webmaster"
 console.log(makeAlphabet(mmm));
 
-// Exercise 3
-// Write a JavaScript function that converts the first letter of every word to uppercase. For example, if x = "prince of persia" then the output should be "Prince Of Persia". Save your JavaScript file and reload the page. Make sure you see the correct output. If not, investigate and fix it.
+    	    // Exercise 3
+                // Write a JavaScript function that converts the first letter of every word to uppercase.
+                // For example, if x = "prince of persia" then the output should be "Prince Of Persia".
+                // Save your JavaScript file and reload the page.Make sure you see the correct output.If not, investigate and fix it.
 
-// Exercise 4
-// Write a JavaScript function that finds the longest word in a phrase. For example, if x = "Web Development Tutorial", then the output should be "Development". Save your JavaScript file and reload the page. Make sure you see the correct output. If not, investigate and fix it
+function capital(str) {
+    cap = "";
+    let arr = str.split(' ');
+    for (let i = 0; i < arr.length; i++) {
+        let g = arr[i].charAt(0).toUpperCase() + arr[i].slice(1);
+        cap = cap.concat(g + " ");
+        
+    }
+    console.log(cap)
+
+}
+
+let xy = "prince of persia"
+capital(xy);
+
+            // Exercise 4
+                // Write a JavaScript function that finds the longest word in a phrase.
+                // For example, if x = "Web Development Tutorial", then the output should be "Development".
+                // Save your JavaScript file and reload the page.
+                // Make sure you see the correct output.If not, investigate and fix it
+function longestWord(str) {
+    let arr = str.split(" ");
+    let lengthi = -Infinity;
+    let longest = "";
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i].length > lengthi) {
+            longest = arr[i];
+            lengthi = arr[i].length;
+        }
+    }
+    console.log(longest);
+    
+}
+
+let xyz = "Web Development Tutorial"
+longestWord(xyz);
+
+        // DOM manipulation exercises
+            // Exercise 1
+                // Now let's add content to an HTML document instead of writing to the console.
+                // Write a function called addBands myBandList) that will list your favorite bands.
+                // Start with an empty HTML page that contains a level 1 heading "My Favorite Bands" and an empty unordered list with ID band - list.
+                // Your function should use the JavaScript DOM to create list items and add them to the unordered list,
+                // with one list item for each string in array myBandList.
+                // For example, if I call:
+                // addBands(['Dire Straits', 'Kansas', 'Steely Dan']);
+                // The function will add three list items to the unordered list.
+
+                
+
+// Exercise 2
+// Write a function called addMultTable(rows, cols) that will create a multiplication table like this. Start with an empty HTML page that only contains a level 1 heading.
+
+// Your function should use the JavaScript DOM to insert an HTML table after the heading.
+
+// For example, if I call:
+
+// addMultTable(4, 8);
+
+// It will create an HTML table with 4 rows and 8 columns, and append it after the level 1 heading.
