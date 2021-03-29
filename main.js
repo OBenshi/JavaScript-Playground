@@ -501,5 +501,5 @@ function oddBetween(num1, num2) {
     }
 }
 
-oddBetween(13,1);
+oddBetween(1,13);
 
