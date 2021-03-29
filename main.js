@@ -484,17 +484,18 @@ function oddBetween(num1, num2) {
     if (num1 < num2) {
         i = num1;
         top = num2;
-        console.log(2)
         
     } else if (num1 > num2) {
         i = num2
         top = num1
-        console.log(3)
     } else {
         return console.log("same number, nothing between")
-    } console.log(i<top)
-    while (i < top) {
-        console.log(i);
+    } 
+    while (i <= top) {
+        if (i%2!=0) {
+            console.log(i);
+        }
+        
         i++;
         
     }
